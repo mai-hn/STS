@@ -129,12 +129,12 @@ def do_train():
     set_seed(args.seed)
 
     # 按行读取数据
-    with open('/kaggle/input/sentence-transfromer/sts/all.tsv', "r", encoding="utf8") as f:
+    with open('./all.tsv', "r", encoding="utf8") as f:
         lines = f.readlines()
 
     example=[]
     api_list = []
-    with open('/kaggle/input/sentence-transfromer/sts/all.json', 'r') as f:
+    with open('./all.json', 'r') as f:
         embeddings = json.load(f)
     for i in range(len(lines)):
         lines[i] = lines[i].strip().split("\t")
